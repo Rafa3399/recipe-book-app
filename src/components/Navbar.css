@@ -1,0 +1,13 @@
+nav{
+  background-color: blueviolet;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+.sidebarIcon{
+  width: 50px;
+}
+.logo{
+  width: 100px;
+}
