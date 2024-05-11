@@ -5,6 +5,9 @@ footer{
   align-items: center;
   height: 75px;
   padding: 20px 0;
+  width: 100%;
+  bottom: 0;
+  position:fixed;
 }
 #footer-images{
   width: 100%;

@@ -12,7 +12,9 @@ function App() {
       <div className='root'>
         <Navbar />
         <Sidebar />
-        <Foodlist />
+        <main>
+          <Foodlist />
+        </main>
         <Footer />
       </div>
     </>
