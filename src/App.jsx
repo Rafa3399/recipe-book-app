@@ -3,6 +3,7 @@ import './App.css'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Sidebar from './components/Sidebar'
+import Foodlist from './components/Foodlist'
 
 function App() {
 
@@ -10,8 +11,9 @@ function App() {
     <>
       <div className='root'>
         <Navbar />
-        <Footer />
         <Sidebar />
+        <Foodlist />
+        <Footer />
       </div>
     </>
   )
