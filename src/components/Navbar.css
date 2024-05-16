@@ -12,7 +12,9 @@ nav{
 }
 .sidebarIcon{
   width: 40px;
+  cursor: pointer;
 }
 .logo{
   width: 80px;
+  cursor: pointer;
 }

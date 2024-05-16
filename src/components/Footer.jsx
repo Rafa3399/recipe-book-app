@@ -7,8 +7,8 @@ function Footer (){
     <footer>
       <div id="footer-images">
         <hr className="line"></hr>
-        <img src={github} className="github" alt="Github" />
-        <img src={linkedin} className="linkedin" alt="Linkedin" />
+        <a href="https://github.com/Rafa3399"><img src={github} className="github" alt="Github" /></a>
+        <a href="https://www.linkedin.com/in/rafael-hernandez-soler-7a449323b/"><img src={linkedin} className="linkedin" alt="Linkedin" /></a>
         <hr className="line"></hr>
       </div>
       <p>By Rafael Hernandez Soler</p>

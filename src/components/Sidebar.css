@@ -2,6 +2,24 @@
   width: 250px;
   height: 100%;
   background-color: #ffe476;
-  top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 85px;
   position:fixed;
+}
+#home, #food, #add-food, #about{
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+  border-bottom: 1px solid rgba(197, 144, 0, 0.687);
+  padding: 20px 0;
+  cursor: pointer;
+  width: 100%;
+}
+
+#home:hover, #food:hover, #add-food:hover, #about:hover{
+  background-color: #fdd226;
 }
