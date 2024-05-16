@@ -1,12 +1,8 @@
-import "./Addfood.css"
 import { useState } from "react";
-import FoodListData from "../assets/recipes.json"
+import "./Addfood.css";
 
-function Addfood(){
-
-  const [foodList, setfoodList] = useState(FoodListData);
-
-  const [foodName, setFoodName] = useState("");
+function Addfood({foodList, setFoodList}) {
+  const [name, setFoodName] = useState("");
   const [calories, setCalories] = useState("");
   const [image, setImage] = useState("");
   const [servings, setServings] = useState("");
@@ -18,9 +14,12 @@ function Addfood(){
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const newFood = {foodName, calories, image, servings};
+    // Generate a unique id for the new food item
+    const id = new Date().getTime().toString();
 
-    setfoodList([newFood, ...foodList]); 
+    const newFood = { id, name, calories, image, servings };
+
+    setFoodList([newFood, ...foodList]);
 
     setFoodName("");
     setCalories("");
@@ -28,39 +27,38 @@ function Addfood(){
     setServings("");
   };
 
-  return(
+  return (
     <div className="main-form">
       <form onSubmit={handleSubmit}>
-        <span>Add a Student</span>
+        <h2>Add a Food Item</h2>
         <div>
           <label>
-            Full Name
-            <input name="foodName" type="text" placeholder="Food Name" onChange={handleFoodNameInput} value={foodName} />
+            Food Name
+            <input name="name" type="text" placeholder="Food Name" onChange={handleFoodNameInput} value={name} />
           </label>
 
           <label>
-            Profile Image
+            Image URL
             <input name="image" type="url" placeholder="Food Image" onChange={handleImageInput} value={image} />
           </label>
 
           <label>
-            Phone
+            Calories
             <input name="calories" type="number" placeholder="Calories" onChange={handleCaloriesInput} value={calories} />
           </label>
 
           <label>
-            Email
+            Servings
             <input name="servings" type="number" placeholder="Servings" onChange={handleServingsInput} value={servings} />
           </label>
         </div>
 
         <div>
-          <button type="submit" onClick={handleSubmit}>Add Student</button>
+          <button type="submit">Add Food Item</button>
         </div>
-
       </form>
     </div>
-  )
+  );
 }
 
 export default Addfood;

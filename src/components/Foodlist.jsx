@@ -2,9 +2,7 @@ import "./Foodlist.css"
 
 function Foodlist({ foodList, setFoodList }) {
   function deleteCard(id) {
-    // Filter out the item with the matching id
     const updatedFoodList = foodList.filter((el) => el.id !== id);
-    // Update the state with the filtered list
     setFoodList(updatedFoodList);
   }
 
@@ -16,7 +14,6 @@ function Foodlist({ foodList, setFoodList }) {
           <section id="cardSection">
             <h2>{el.name}</h2>
             <p><b>Calories:</b> {el.calories} cal</p>
-            {/* Pass the deleteCard function with the id */}
             <button id="delete-btn" onClick={() => deleteCard(el.id)}> Delete </button>
           </section>
         </div>

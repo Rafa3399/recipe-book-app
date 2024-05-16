@@ -17,10 +17,9 @@ function App() {
       <div className='root'>
         <Navbar />
         <Routes>
-          <Route path="/sidebar" element={<Sidebar/>} />
-          {/* Pass foodList and setFoodList as props */}
+          <Route path="/sidebar" element={<Sidebar />} />
           <Route path="/" element={<Foodlist foodList={foodList} setFoodList={setFoodList} />} />
-          <Route path="/add-food" element={<Addfood/>} />
+          <Route path="/add-food" element={<Addfood foodList={foodList} setFoodList={setFoodList} />} />
         </Routes>
         <Footer />
       </div>
@@ -28,4 +27,4 @@ function App() {
   );
 }
 
-export default App
+export default App;
