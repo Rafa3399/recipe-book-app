@@ -1,6 +1,45 @@
-#bmi-main{
+.CalorieCalculator{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+.calculator{
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 600px;
+
+}
+.calories-intake{
+
+  display: flex;
+  flex-direction: column;
+}
+.meals{
+
+}
+.food-list-calories{
+  display: flex;
+}
+.food-list-calories > p, h3{
+  margin: 0;
+}
+.food-list-calories > button{
+        background: none repeat scroll 0 0 transparent;
+        border: medium none;
+        border-spacing: 0;
+        color: #26589F;
+        font-family: 'PT Sans Narrow',sans-serif;
+        font-size: 16px;
+        font-weight: normal;
+        line-height: 1.42rem;
+        list-style: none outside none;
+        margin: 0;
+        padding: 0;
+        text-align: left;
+        text-decoration: none;
+        text-indent: 0;
+        cursor: pointer;
 }
