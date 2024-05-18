@@ -8,7 +8,7 @@
   top: 85px;
   position:fixed;
 }
-#home, #food, #add-food, #about{
+#home, #food, #add-food, #calorie-calculator, #about{
   display: flex;
   justify-content: center;
   color: white;
@@ -20,6 +20,6 @@
   width: 100%;
 }
 
-#home:hover, #food:hover, #add-food:hover, #about:hover{
+#home:hover, #food:hover, #add-food:hover, #calorie-calculator:hover, #about:hover{
   background-color: #fdd226;
 }
