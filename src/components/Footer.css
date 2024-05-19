@@ -2,9 +2,10 @@ footer{
   background-color: #EDCC4A;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  height: 60px;
-  padding: 20px 0;
+  height: 50px;
+  padding: 17px 0;
   width: 100%;
   bottom: 0;
   position:fixed;
@@ -29,4 +30,7 @@ footer{
   height:1px;
   margin: 0;
   border: none;
+}
+footer > p{
+  margin: 5px 0 0 0;
 }

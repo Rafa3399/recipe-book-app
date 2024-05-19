@@ -31,30 +31,27 @@ function Addfood({foodList, setFoodList}) {
     <div className="main-form">
       <form onSubmit={handleSubmit}>
         <h2>Add a Food Item</h2>
-        <div>
-          <label>
+        <label>
             Food Name
-            <input name="name" type="text" placeholder="Food Name" onChange={handleFoodNameInput} value={name} />
+            <input className="add-food-form" name="name" type="text" placeholder="Food Name" onChange={handleFoodNameInput} value={name} />
           </label>
 
           <label>
             Image URL
-            <input name="image" type="url" placeholder="Food Image" onChange={handleImageInput} value={image} />
+            <input className="add-food-form" name="image" type="url" placeholder="Food Image" onChange={handleImageInput} value={image} />
           </label>
 
           <label>
             Calories
-            <input name="calories" type="number" placeholder="Calories" onChange={handleCaloriesInput} value={calories} />
+            <input className="add-food-form" name="calories" type="number" placeholder="Calories" onChange={handleCaloriesInput} value={calories} />
           </label>
 
           <label>
             Servings
-            <input name="servings" type="number" placeholder="Servings" onChange={handleServingsInput} value={servings} />
+            <input className="add-food-form" name="servings" type="number" placeholder="Servings" onChange={handleServingsInput} value={servings} />
           </label>
-        </div>
-
         <div>
-          <button type="submit">Add Food Item</button>
+          <button id="form-button" type="submit">Add Food Item</button>
         </div>
       </form>
     </div>
