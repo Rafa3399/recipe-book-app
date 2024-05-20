@@ -20,14 +20,14 @@ function Foodlist({ foodList, setFoodList, foodAte, setFoodAte }) {
       {foodList.map((el) => (
         <div className="Card" key={el.id}>
           <img id="cardImg" src={el.image} alt={el.name} />
-          <section id="card-section">
-            <h2>{el.name}</h2>
-            <p><b>Calories:</b> {el.calories} cal</p>
-            <p><b>Servings:</b> {el.servings} </p>
-            <button id="eaten-btn" onClick={() => addAteList(el)}> Eaten </button>
-          </section>
-          <div id="close">
-           <button id="delete-btn" onClick={() => deleteCard(el.id)}> ❌ </button>
+          <div id="card-info">
+            <section id="card-section">
+              <h2>{el.name}</h2>
+              <p><b>Calories:</b> {el.calories} cal</p>
+              <p><b>Servings:</b> {el.servings} </p>
+              <button id="eaten-btn" onClick={() => addAteList(el)}> Eaten </button>
+            </section>
+            <button id="delete-btn" onClick={() => deleteCard(el.id)}> ❌ </button>
           </div>
         </div>
       ))}
