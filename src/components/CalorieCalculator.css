@@ -1,30 +1,54 @@
+.calorie-calculator-main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
 .CalorieCalculator{
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
   align-items: center;
-  width: 100%;
-  margin-top: 100px;
-  margin-bottom: 100px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  width: 70%;
+  padding: 20px 0;
+}
+.CalorieCalculator > h1{
+  margin: 0px 0 10px 0;
 }
 .calculator{
   display: flex;
   justify-content: center;
+  width: 100%;
 
 }
 .calories-intake{
-
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.calories-intake > h2, .meals > h2{
+  margin: 0 0 15px 0;
 }
 .meals{
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
+
 .food-list-calories{
   display: flex;
+  margin-bottom: 5px;
 }
-.food-list-calories > p, h3{
+.food-list-calories > p, h2, h3{
   margin: 0;
+}
+.food-list-calories > b{
+  margin-right: 3px;
 }
 .food-list-calories > button{
         background: none repeat scroll 0 0 transparent;
@@ -42,4 +66,19 @@
         text-decoration: none;
         text-indent: 0;
         cursor: pointer;
+}
+#result-text{
+  margin-top: 10px;
+}
+input, select{
+  border-radius: 6px;
+  border: 1px solid #989898;
+  padding: 8px;
+  margin-left: 3px;
+}
+input:hover, select:hover {
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.364);
+}
+#last-select{
+  margin-top: 10px;
 }

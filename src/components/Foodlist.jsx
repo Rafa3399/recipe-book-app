@@ -20,9 +20,12 @@ function Foodlist({ foodList, setFoodList, foodAte, setFoodAte }) {
           <section id="cardSection">
             <h2>{el.name}</h2>
             <p><b>Calories:</b> {el.calories} cal</p>
-            <button id="favorite-btn" onClick={() => addAteList(el)}> Eat </button>
-            <button id="delete-btn" onClick={() => deleteCard(el.id)}> Delete </button>
+            <p><b>Servings:</b> {el.servings} </p>
+            <button id="eaten-btn" onClick={() => addAteList(el)}> Eaten </button>
           </section>
+          <div id="close">
+           <button id="delete-btn" onClick={() => deleteCard(el.id)}> ❌ </button>
+          </div>
         </div>
       ))}
     </div>

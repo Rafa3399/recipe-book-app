@@ -2,7 +2,6 @@
 html, body, html * {
   font-family: 'Roboto', sans-serif;
 }
-
 body{
   margin: 0;
   font-family: 'Roboto';
@@ -12,4 +11,7 @@ body{
   color: inherit;
   text-decoration: inherit;
   width: 100%;
+}
+h2{
+  text-decoration: underline;
 }
