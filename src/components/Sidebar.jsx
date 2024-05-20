@@ -13,7 +13,6 @@ function Sidebar (){
       <Link className='text-link' to='/calorie-calculator'>
         <section id="calorie-calculator">Calorie Calculator</section>
       </Link>
-      <section id="about">About</section>
     </div>
   )
 }

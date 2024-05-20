@@ -13,11 +13,13 @@ function Foodlist({ foodList, setFoodList, foodAte, setFoodAte }) {
   }
 
   return (
+    <>
+    <h1 id="title">Food List</h1>
     <div className="FoodList">
       {foodList.map((el) => (
         <div className="Card" key={el.id}>
           <img id="cardImg" src={el.image} alt={el.name} />
-          <section id="cardSection">
+          <section id="card-section">
             <h2>{el.name}</h2>
             <p><b>Calories:</b> {el.calories} cal</p>
             <p><b>Servings:</b> {el.servings} </p>
@@ -29,6 +31,7 @@ function Foodlist({ foodList, setFoodList, foodAte, setFoodAte }) {
         </div>
       ))}
     </div>
+    </>
   );
 }
 export default Foodlist;

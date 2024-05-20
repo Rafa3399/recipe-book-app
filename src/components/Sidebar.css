@@ -7,8 +7,9 @@
   align-items: center;
   top: 85px;
   position:fixed;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
-#home, #food, #add-food, #calorie-calculator, #about{
+#home, #add-food, #calorie-calculator {
   display: flex;
   justify-content: center;
   color: white;
@@ -18,8 +19,9 @@
   padding: 20px 0;
   cursor: pointer;
   width: 100%;
+  text-shadow: 0 0 2px #000000;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
-
-#home:hover, #food:hover, #add-food:hover, #calorie-calculator:hover, #about:hover{
+#home:hover, #add-food:hover, #calorie-calculator:hover {
   background-color: #fdd226;
 }
