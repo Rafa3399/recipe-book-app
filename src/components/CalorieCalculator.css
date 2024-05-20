@@ -38,6 +38,8 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
+  height: 300px;
+  overflow-y:scroll
 }
 
 .food-list-calories{

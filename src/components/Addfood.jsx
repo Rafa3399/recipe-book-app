@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { v4 as uuidv4 } from 'uuid';
 import "./Addfood.css";
 
 function Addfood({foodList, setFoodList}) {
@@ -15,7 +16,7 @@ function Addfood({foodList, setFoodList}) {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Generate a unique id for the new food item
-    const id = new Date().getTime().toString();
+    const id = uuidv4();
 
     const newFood = { id, name, calories, image, servings };
 

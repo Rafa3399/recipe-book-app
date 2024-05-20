@@ -1,4 +1,5 @@
 import "./Foodlist.css"
+import { v4 as uuidv4 } from 'uuid';
 
 function Foodlist({ foodList, setFoodList, foodAte, setFoodAte }) {
   //Delete the card
@@ -8,13 +9,13 @@ function Foodlist({ foodList, setFoodList, foodAte, setFoodAte }) {
   }
   //Add food to the food ate list
   function addAteList(food) {
-    setFoodAte([...foodAte, food]);
-    console.log(foodAte)
+    const foodWithId = { ...food, id: uuidv4() };
+    setFoodAte([...foodAte, foodWithId]);
   }
 
   return (
     <>
-    <h1 id="title">Food List</h1>
+    <h1 id="title">Food List ({foodAte.length})</h1>
     <div className="FoodList">
       {foodList.map((el) => (
         <div className="Card" key={el.id}>
