@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import "./CalorieCalculator.css";
 
-function CalorieCalculator({ foodAte, setFoodAte }) {
+function CalorieCalculator({ foodEaten, setFoodEaten }) {
   const [gender, setGender] = useState('');
   const [weight, setWeight] = useState('');
   const [height, setHeight] = useState('');
@@ -15,8 +15,8 @@ function CalorieCalculator({ foodAte, setFoodAte }) {
   const handleActivityLevelChange = (e) => setActivityLevel(e.target.value);
 
   function deleteCard(id) {
-    const updatedFoodList = foodAte.filter((el) => el.id !== id);
-    setFoodAte(updatedFoodList);
+    const updatedFoodList = foodEaten.filter((el) => el.id !== id);
+    setFoodEaten(updatedFoodList);
   }
 
   const calculateRecommendedCalories = () => {
@@ -40,7 +40,7 @@ function CalorieCalculator({ foodAte, setFoodAte }) {
     return bmr * activityMultiplier;
   };
 
-  const totalCaloriesConsumed = foodAte.reduce((total, food) => total + food.calories, 0);
+  const totalCaloriesConsumed = foodEaten.reduce((total, food) => total + food.calories, 0);
   const recommendedCalories = calculateRecommendedCalories();
   const calorieDifference = recommendedCalories - totalCaloriesConsumed;
 
@@ -89,7 +89,7 @@ function CalorieCalculator({ foodAte, setFoodAte }) {
           </div>
           <div className="meals">
             <h2>Meals Consumed</h2>
-            {foodAte.map((el) => (
+            {foodEaten.map((el) => (
               <div className="food-list-calories" key={el.id}>
                 <b>{el.name}:</b>
                 <p> {el.calories} cal</p>

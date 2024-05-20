@@ -11,16 +11,16 @@ import { Routes, Route } from 'react-router-dom';
 
 function App() {
   const [foodList, setFoodList] = useState(FoodListData);
-  const [foodAte, setFoodAte] = useState([]);
+  const [foodEaten, setFoodEaten] = useState([]);
 
   return (
     <>
       <div className='root'>
         <Navbar />
         <Routes>
-          <Route path="/" element={<Foodlist foodList={foodList} setFoodList={setFoodList} foodAte={foodAte} setFoodAte={setFoodAte}/>} />
+          <Route path="/" element={<Foodlist foodList={foodList} setFoodList={setFoodList} foodEaten={foodEaten} setFoodEaten={setFoodEaten}/>} />
           <Route path="/add-food" element={<Addfood foodList={foodList} setFoodList={setFoodList} />} />
-          <Route path="/calorie-calculator" element={<CalorieCalculator foodAte={foodAte} setFoodAte={setFoodAte}/>} />
+          <Route path="/calorie-calculator" element={<CalorieCalculator foodEaten={foodEaten} setFoodEaten={setFoodEaten}/>} />
         </Routes>
         <Footer />
       </div>
