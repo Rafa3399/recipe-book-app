@@ -1,27 +1,51 @@
-#sidebar{
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -300px;
   width: 250px;
   height: 100%;
-  background-color: #ffe476;
+  background-color: #ffe478;
+  color: white;
+  transition: left 0.3s ease;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  top: 85px;
-  position:fixed;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  align-items: end;
+}
+.sidebar.open {
+  left: 0;
+}
+.sidebar .close-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  text-shadow: 0 0 3px #000000;
+  margin: 10px 10px 10px 0;
+}
+.sidebar .close-btn:active {
+  transform: scale(0.9);
 }
 #home, #add-food, #calorie-calculator {
   display: flex;
   justify-content: center;
   color: white;
-  font-size: 25px;
+  font-size: 28px;
   font-weight: bold;
   border-bottom: 1px solid rgba(197, 144, 0, 0.687);
   padding: 20px 0;
   cursor: pointer;
   width: 100%;
-  text-shadow: 0 0 2px #000000;
-  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  text-shadow: 0 0 3px #000000;
 }
 #home:hover, #add-food:hover, #calorie-calculator:hover {
   background-color: #fdd226;
+}
+#home:active, #add-food:active, #calorie-calculator:active {
+  transform: scale(0.9);
+}
+.text-link{
+  text-decoration: none;
 }

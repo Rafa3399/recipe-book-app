@@ -2,7 +2,6 @@
 import './App.css'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
-import Sidebar from './components/Sidebar'
 import Foodlist from './components/Foodlist'
 import Addfood from './components/Addfood'
 import FoodListData from "./assets/recipes.json"
@@ -19,7 +18,6 @@ function App() {
       <div className='root'>
         <Navbar />
         <Routes>
-          <Route path="/sidebar" element={<Sidebar />} />
           <Route path="/" element={<Foodlist foodList={foodList} setFoodList={setFoodList} foodAte={foodAte} setFoodAte={setFoodAte}/>} />
           <Route path="/add-food" element={<Addfood foodList={foodList} setFoodList={setFoodList} />} />
           <Route path="/calorie-calculator" element={<CalorieCalculator foodAte={foodAte} setFoodAte={setFoodAte}/>} />

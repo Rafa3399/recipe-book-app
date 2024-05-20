@@ -30,7 +30,7 @@ function Addfood({foodList, setFoodList}) {
   return (
     <div className="main-form">
       <form onSubmit={handleSubmit}>
-        <h2 id="add-food-text">Add a Food</h2>
+        <h2 id="add-food-text">Add a Food Item</h2>
         <label>
             Food Name
             <input className="add-food-form" name="name" type="text" placeholder="Food Name" onChange={handleFoodNameInput} value={name} />
